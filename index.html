@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="image-slider"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">New</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Movies</a>
+                <a href="#">Web Series</a>
+                <a href="#">Comedy</a>
+                <a href="#">Thriller</a>
+                <a href="#">Horror</a>
+
+            </div>
+    <div class="nav-right">
+        <input type="text" class="search-bar" placeholder="Search movies,TV shows...">
+        <button id="toggle-mode">Toggle Mode</button> <!-- Added toggle mode button -->
+    </div>
+
+        </nav>
+    </header>
+
+<main class="main-content">
+
+
+        <!-- Category: Popular on Netflix -->
+        <section class="category">
+            <h2>Popular on Netflix</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Stranger Things">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="John Wick">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/5zmiBoMzeeVdQ62no55JOJMY498.jpg" alt="Game of Thrones">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="The Dark Knight">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Mad Max: Fury Road">
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Action Movies -->
+        <section class="category">
+            <h2>Action Movies</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="The Dark Knight">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="John Wick">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Mad Max: Fury Road">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/5zmiBoMzeeVdQ62no55JOJMY498.jpg" alt="Game of Thrones">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Stranger Things">
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: TV Shows -->
+        <section class="category">
+            <h2>TV Shows</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/5zmiBoMzeeVdQ62no55JOJMY498.jpg" alt="Game of Thrones">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Stranger Things">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="John Wick">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="The Dark Knight">
+                </div>
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Mad Max: Fury Road">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Help Center</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Web Series</a> <!-- Updated footer link -->
+        </div>
+        <p>&copy; 2023 Netflix Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = [
+            'https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg',
+            'https://image.tmdb.org/t/p/original/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg',
+            'https://image.tmdb.org/t/p/original/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            const header = document.getElementById('header');
+            header.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 3000);
+        changeBackground(); // Initial call to set the first image
+    </script>
+</body>
+</html>

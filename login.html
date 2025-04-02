@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Netflix Clone</title>
+  <style>
+    body {
+      background-color: #141414;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 40px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    .login-container h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .login-container button:hover {
+      background-color: #f40612;
+    }
+    .login-container p {
+      color: gray;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .login-container a {
+      color: #e50914;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <div style="text-align: left; margin-top: 10px;">
+        <input type="checkbox" name="remember" /> Remember Me
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Sign up</a></p>
+  </div>
+</body>
+</html>
