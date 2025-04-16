@@ -23,7 +23,11 @@
                         <i class="fas fa-globe"></i>
                         <select name="languages" id="languagesSelect" class="language__drop__down">
                             <option value="english" selected>English</option>
-                            <option value="hindi">हिन्दी</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="hindi">Marathi</option>
+                            <option value="hindi">Gujrati</option>
+                            <option value="hindi">Malayalam</option>
+                            <option value="hindi">Tamil</option>
                         </select>
                     </div>
                 </div>
@@ -40,7 +44,7 @@
             <div class="hero__card">
                 <h1 class="hero__title">Unlimited Movies, TV Shows, and More.</h1>
                 <p class="hero__subtitle">Watch anywhere. Cancel anytime.</p>
-                <button class="primary__button" onclick="location.href='plans.php'">Get Started <i class="fal fa-chevron-right"></i></button>
+                <button class="primary__button"><a href="login.html" style="color: white;"> Get Started </a><i class="fal fa-chevron-right" style="color: white;"></i></button>
             </div>
         </section>
 
@@ -50,8 +54,9 @@
                     <h3 class="feature__title">Enjoy on your TV.</h3>
                     <h5 class="feature__sub__title">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h5>
                 </div>
-                <div class="feature__image__container">
+                <div class="feature__image__container" style="position: relative;">
                     <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Watch on TV" class="feature__image" />
+                    <img src="https://ntvb.tmsimg.com/assets/p20492187_b_h8_aa.jpg?w=1280&h=720" alt="TV Show Poster" style="position: absolute; width: 68%; height: 50%; top: 22%; left: 16%; object-fit: cover; border-radius: 2px;" />
                 </div>
             </div>
             <div class="feature">
@@ -118,11 +123,12 @@
                         <input type="email" class="email__input" placeholder=" " />
                         <label class="email__label">Email Address</label>
                     </div>
-                    <button class="primary__button">Get Started <i class="fal fa-chevron-right"></i></button>
+                    <button class="primary__button"><span style="color: white;">Get Started</span> <i class="fal fa-chevron-right" style="color: white;"></i></button>
                 </div>
             </div>
         </section>
     </main>
+    
 
     <footer>
         <div class="footer__row__1">
@@ -158,7 +164,7 @@
                 <i class="fas fa-globe"></i>
                 <select name="languages" id="languagesSelect" class="language__drop__down">
                     <option value="english" selected>English</option>
-                    <option value="hindi">हिन्दी</option>
+                    <option value="hindi">Hindi</option>
                 </select>
             </div>
         </div>
@@ -167,6 +173,6 @@
         </div>
     </footer>
 
-    <script src="src/index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
